@@ -64,14 +64,127 @@ public cloud</td>
 </tr>
 </table>
 
-![how website works](img/modelsCloud.png)
+![Cloud models](img/modelsCloud.png)
 
 ### 5 Characteristics of Cloud Computing
 
+| On-demand self service                                                                        | Broad network access                                                                                       | Multi-tenancy and resource pooling                                                                                                                      | Rapid elasticity and scalability                                                                                              | Measured service                                                        |
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Users can provision resources and use them without human interaction from the service provide | <ul><li>Resources available over the network</li><li>can be accessed by diverse client platforms</li></ul> | Multiple customers can share the same infrastructure and applications with security and privacy.Customers are serviced from the same physical resources | <ul> <li>Automatically and quickly acquire and dispose resources when needed</li><li>Quickly and easily scale based on demand | Usage is measured</li></ul> users pay correctly for what they have used |
 
-|On-demand self service     | Broad network access          | Multi-tenancy and resource pooling  |Rapid elasticity and scalability |Measured service |
-| ------------- |-------------| -----|-----|-----|
-| Users can provision resources and use them without human interaction from the service provide      | Resources available over the network, and can be accessed by diverse client platforms |  Multiple customers can share the same infrastructure and applications with security and privacy.Customers are serviced from the same physical resources |Automatically and quickly acquire and dispose resources when needed, Quickly and easily scale based on demand |Usage is measured, users pay correctly for what they have used |   
+### 6 Advantages of Cloud Computing
 
+| Trade capital expense (CAPEX) for operational expense (OPEX)                                                                   | Benefit from massive economies of scale                        | Stop guessing capacity               | Increase speed and agility  | Stop spending money running and maintaining data centers | Go global in minutes                   |
+| ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- | ------------------------------------ | --------------------------- | -------------------------------------------------------- | -------------------------------------- |
+| <ul><li>Pay On-Demand: don’t own hardware</li><li>Reduced Total Cost of Ownership (TCO) & Operational Expense (OPEX)</li></ul> | Prices are reduced as AWS is more efficient due to large scale | Scale based on actual measured usage | Increase speead and agility | Stop spending money running and maintaining data centers | leverage the AWS global infrastructure |
 
+### Types of Cloud Computing
+
+<table>
+  <tbody>
+    <tr>
+      <th>Infrastructure as a Service (IaaS)</th>
+      <th align="center"> Platform as a Service (PaaS)</th>
+      <th align="right">Software as a Service (SaaS)</th>
+    </tr>
+    <tr>
+      <td>
+      <ul>
+        <li>Provide building blocks for cloud IT</li>
+        <li>Provides networking, computers, data storage space</li>
+        <li>Highest level of flexibility</li>
+          <li> Easy parallel with traditional on-premises IT</li>
+      <ul>
+      </td>
+      <td align="center">
+        <ul>
+        <li>Removes the need for your organization to manage the underlying infrastructure</li>
+        <li>Focus on the deployment and management of your applications</li>
+      <ul>
+      </td>
+      <td align="right">Completed product that is run and managed by the service provider</td>
+    </tr>
+  </tbody>
+</table>
+
+![comparison in cloud computing](img/comparison-types-compute-clouding.png)
+
+![types of cloud-computing](img/example-types-cloud--computing.png)
+
+### Pricing of the Cloud - Quick Overview
+- AWS has 3 pricing fundamentals, following pay-as-you-go pricing model
+- **Compute:**Pay for compute time
+- **Storage:**Pay for data stored in the Cloud
+- **Data transfer OUT of the Cloud:**Data transfer IN is free
+- Solves the expensive issue of traditional IT
+
+## AWS Overview
+
+### Cloud History
+![Cloud history](img/example-types-cloud--computing.png)
+
+### AWS Cloud Use Cases
+- AWS enables you to build sophisticated, scalable applications
+- Aplicable to a diverse set of industries
+- Use cases include
+  + Enterprise IT, backup & storage, Big data analytics,
+  + Web hosting, Mobile & Social Apps
+
+#### AWS Global Infrastructure
+- AWS Regions
+- AWS Availability Zones
+- AWS Data Centers
+- AWS Edge Locations /
+Points of Presence
+
+-> checkout infrastructure.aws
+
+### AWS Regions
+- AWS has Regions all around the world
+- Names can be us-east-1, eu-west-3...
+- A region is a **cluster of data centers**
+- **Most AWS services are region-scoped**.So if you switch region, it will be refreshed
+
+### How to choose AWS region
+- Compliance with data governance and legal
+requirements: data never leaves a region without
+your explicit permission
+- Proximity to customers: reduced latency. If you use different target region -> lagging
+- Available services within a Region: new services
+and new features aren’t available in every Region
+-Pricing: pricing varies region to region and is
+transparent in the service pricing page
+
+| Compliance with data governance and legal requirements| Proximity to customers  | Available services within a Region    |Pricing   |
+| :---:   | :---: | :---: |:---: |
+data never leaves a region without your explicit permission | reduced latency (reduce lag)  | new services and new features aren’t available in every Region   |pricing varies region to region and is transparent in the service pricing page   |
+
+### Availablity zones
+- Each region has many (usually 3, min is 2, max is 6). Example:
+  + ap-southeast-2a
+  + ap-southeast-2b
+  + ap-southeast-2c
+
+- Each availability zone (AZ) is one or more
+discrete data centers with redundant power,
+networking, and connectivity
+-They’re separate from each other, so that
+they’re isolated from disasters
+- They’re connected with high bandwidth,
+ultra-low latency networking
+
+![Availability Zones](img/AZ-availabilityzones.png)
+
+### AWS Points of Presence (Edge Locations)
+- Amazon has 216 points of presence (205 Edge Locations & || Regional Caches) in 84 cities across 42 countries
+- Content is delivered to end users with lower latency
+
+![Point of Presence](img/point-presence.png)
+
+### Tour of AWS Console
+
+![Point of Presence](img/aws-console.png)
+
+### Shared Responsibility Model diagram
+![Point of Presence](img/response-diagram.png)
 
