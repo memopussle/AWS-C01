@@ -112,6 +112,7 @@ public cloud</td>
 ![types of cloud-computing](img/example-types-cloud--computing.png)
 
 ### Pricing of the Cloud - Quick Overview
+
 - AWS has 3 pricing fundamentals, following pay-as-you-go pricing model
 - **Compute:**Pay for compute time
 - **Storage:**Pay for data stored in the Cloud
@@ -121,61 +122,69 @@ public cloud</td>
 ## AWS Overview
 
 ### Cloud History
+
 ![Cloud history](img/example-types-cloud--computing.png)
 
 ### AWS Cloud Use Cases
+
 - AWS enables you to build sophisticated, scalable applications
 - Aplicable to a diverse set of industries
 - Use cases include
-  + Enterprise IT, backup & storage, Big data analytics,
-  + Web hosting, Mobile & Social Apps
+  - Enterprise IT, backup & storage, Big data analytics,
+  - Web hosting, Mobile & Social Apps
 
 #### AWS Global Infrastructure
+
 - AWS Regions
 - AWS Availability Zones
 - AWS Data Centers
 - AWS Edge Locations /
-Points of Presence
+  Points of Presence
 
 -> checkout infrastructure.aws
 
 ### AWS Regions
+
 - AWS has Regions all around the world
 - Names can be us-east-1, eu-west-3...
 - A region is a **cluster of data centers**
 - **Most AWS services are region-scoped**.So if you switch region, it will be refreshed
 
 ### How to choose AWS region
+
 - Compliance with data governance and legal
-requirements: data never leaves a region without
-your explicit permission
+  requirements: data never leaves a region without
+  your explicit permission
 - Proximity to customers: reduced latency. If you use different target region -> lagging
 - Available services within a Region: new services
-and new features aren’t available in every Region
--Pricing: pricing varies region to region and is
-transparent in the service pricing page
+  and new features aren’t available in every Region
+  -Pricing: pricing varies region to region and is
+  transparent in the service pricing page
 
-| Compliance with data governance and legal requirements| Proximity to customers  | Available services within a Region    |Pricing   |
-| :---:   | :---: | :---: |:---: |
-data never leaves a region without your explicit permission | reduced latency (reduce lag)  | new services and new features aren’t available in every Region   |pricing varies region to region and is transparent in the service pricing page   |
+|   Compliance with data governance and legal requirements    |    Proximity to customers    |               Available services within a Region               |                                    Pricing                                     |
+| :---------------------------------------------------------: | :--------------------------: | :------------------------------------------------------------: | :----------------------------------------------------------------------------: |
+| data never leaves a region without your explicit permission | reduced latency (reduce lag) | new services and new features aren’t available in every Region | pricing varies region to region and is transparent in the service pricing page |
 
 ### Availablity zones
+
 - Each region has many (usually 3, min is 2, max is 6). Example:
-  + ap-southeast-2a
-  + ap-southeast-2b
-  + ap-southeast-2c
+
+  - ap-southeast-2a
+  - ap-southeast-2b
+  - ap-southeast-2c
 
 - Each availability zone (AZ) is one or more
-discrete data centers with redundant power,
-networking, and connectivity
--They’re separate from each other, so that
-they’re isolated from disasters
+  discrete data centers with redundant power,
+  networking, and connectivity
+  -They’re separate from each other, so that
+  they’re isolated from disasters
 - They’re connected with high bandwidth,
-ultra-low latency networking
+  ultra-low latency networking
 
 ![Availability Zones](img/AZ-availabilityzones.png)
 
 ### AWS Points of Presence (Edge Locations)
+
 - Amazon has 216 points of presence (205 Edge Locations & || Regional Caches) in 84 cities across 42 countries
 - Content is delivered to end users with lower latency
 
@@ -186,10 +195,11 @@ ultra-low latency networking
 ![Tour of AWS Console](img/aws-console.png)
 
 ### Shared Responsibility Model diagram
+
 ![Shared Responsibility Model diagram](img/response-diagram.png)
 
-
 ## IAM - Users & Groups
+
 - AM = Identity and Access Management, Global service
 - Root account created by default, shouldn’t be used or shared
 - Users are people within your organization, and can be grouped
@@ -200,33 +210,37 @@ ultra-low latency networking
 ![IAM groups](img/IAM-groups.png)
 
 ### IAM: Permissions
+
 - Users or Groups can be
-assigned JSON documents
-called policies
+  assigned JSON documents
+  called policies
 - These policies define the permissions of the users
 - In AWS you apply the least privilege principle: don’t give more permissions than a user needs. Ex: users can use uneccessary services-> cost and not secured
 
 ![IAM permissions](img/IAM-permissions.png)
 
 ### IAM Policies inheritance
+
 ![Policy inheritance - IAM](img/policies-inheritance.png)
 
 ### IAM Policies Structure
 
 - Consist of:
-  + Version: policy language version, always include "2012-10-17"
-  + Id: an identifier for the policy
-  + Statement: one or more individual statements (required)
-    + Sid: an identifier for the statement
-    + Effect: whether the statement allows or denies access (Allow, Deny)
-    + Principal: account/user/role to which this policy applied to
-    + Action: list of actions this policy allows or denies
-    + Resource: list of resources to which this actions applied to
-    + Condition: conditions for when this policy is in effect (optional)
+
+  - Version: policy language version, always include "2012-10-17"
+  - Id: an identifier for the policy
+  - Statement: one or more individual statements (required)
+    - Sid: an identifier for the statement
+    - Effect: whether the statement allows or denies access (Allow, Deny)
+    - Principal: account/user/role to which this policy applied to
+    - Action: list of actions this policy allows or denies
+    - Resource: list of resources to which this actions applied to
+    - Condition: conditions for when this policy is in effect (optional)
 
   ![Policy Structure](img/policy-structure.png)
 
 ### Password Policy
+
 - Strong passwords = higher security for your account
   - In AWS, you can setup a password policy:
   - Set a minimum password length
@@ -240,17 +254,20 @@ called policies
 - Prevent password re-use
 
 ### Multi Factor Authentication - MFA
+
 - Users have access to your account and can possibly change configurations or delete resources in your AWS account
 - **You want to protect your Root Accounts and IAM users**
 
- ![MFA](img/mfa.png)
+![MFA](img/mfa.png)
 
 - Main benefit of MFA: **if a password is stolen or hacked, the account is not compromised**
 
 ### MFAA devices options in AWS
- ![mfa options](img/mfa-options.png)
 
-### How can users access  AWS?
+![mfa options](img/mfa-options.png)
+
+### How can users access AWS?
+
 - To access AWS, you have three options:
   - AWS Management Console (protected by password + MFA)
   - AWS Command Line Interface (CLI): protected by access keys
@@ -262,49 +279,56 @@ called policies
 - Secret Access Key ~= password
 
 #### AWS CLI
+
 - A tool that enables you to interact with AWS services using commands in
-your command-line shell
+  your command-line shell
 - Direct access to the public APIs of AWS services
 - You can develop scripts to manage your resources
 - It’s open-source https://github.com/aws/aws-cli
 - Alternative to using AWS Management Console
 
- ![Point of Presence](img/mfa-options.png)
- 
+![Point of Presence](img/mfa-options.png)
+
 ### AWS SDK
+
 - AWS Software Development Kit (AWS SDK)
 - Language-specific APIs (set of libraries)
 - Enables you to access and manage AWS services
-programmatically
+  programmatically
 - Embedded within your application
 - Supports
-  + SDKs (JavaScript, Python, PHP, .NET, Ruby, Java, Go, Node.js,
-C++)
-  + Mobile SDKs (Android, iOS, …)
-  + IoT Device SDKs (Embedded C, Arduino, …)
+
+  - SDKs (JavaScript, Python, PHP, .NET, Ruby, Java, Go, Node.js,
+    C++)
+  - Mobile SDKs (Android, iOS, …)
+  - IoT Device SDKs (Embedded C, Arduino, …)
 
 - AWS CLI is built on AWS SDK for Python
 
 ### IAM Roles for Services
+
 - Some AWS service will need to perform actions on your behalf
 - To do so, we will assign permissions to AWS services
-with IAM Roles
-- Common roles:  
-  + EC2 Instance Roles 
-  + Lambda Function Roles 
-  + Roles for CloudFormation 
-  
+  with IAM Roles
+- Common roles:
+
+  - EC2 Instance Roles
+  - Lambda Function Roles
+  - Roles for CloudFormation
+
   ![Policy Structure](img/IAM-roles.png)
 
 ### IAM Security Tools
- - IAM Credentials Report (account-level)
-   + a report that lists all your account's users and the status of their various
-credentials
 
- - IAM Access Advisor (user-level)
-   + Access advisor shows the service permissions granted to a user and when those
-services were last accessed.
-   + You can use this information to revise your policies
+- IAM Credentials Report (account-level)
+
+  - a report that lists all your account's users and the status of their various
+    credentials
+
+- IAM Access Advisor (user-level)
+  - Access advisor shows the service permissions granted to a user and when those
+    services were last accessed.
+  - You can use this information to revise your policies
 
 ### IAM Guidlines & Best Practices
 
@@ -320,33 +344,34 @@ services were last accessed.
 
 ### Shared Responsibilitiy Model for IAM
 
-  ![Shared Responsibilitiy Model for IAM](img/shared-reponse-IAM.png)
+![Shared Responsibilitiy Model for IAM](img/shared-reponse-IAM.png)
 
 ## Summary - IAM Section
- 
- - **Users**: mapped to a physical user, has a password for AWS Console
- - **Groups**: contains users only
- - **Policies**: JSON document that outlines permissions for users or groups
- - **Roles**: for EC2 instances or AWS services
- - **Security**: MFA + Password Policy
- - **AWS CLI**: manage your AWS services using the command-line
- - **AWS SDK**: manage your AWS services using a programming language
- - **Access Keys**: access AWS using the CLI or SDK
- - **Audit**: IAM Credential Reports & IAM Access Advisor
- 
- 
+
+- **Users**: mapped to a physical user, has a password for AWS Console
+- **Groups**: contains users only
+- **Policies**: JSON document that outlines permissions for users or groups
+- **Roles**: for EC2 instances or AWS services
+- **Security**: MFA + Password Policy
+- **AWS CLI**: manage your AWS services using the command-line
+- **AWS SDK**: manage your AWS services using a programming language
+- **Access Keys**: access AWS using the CLI or SDK
+- **Audit**: IAM Credential Reports & IAM Access Advisor
+
 ### EC2 Instance Storage Section
+
 - An EBS (Elastic Block Store) Volume is a network drive you can attach to your instances while they run
 - It allows your instances to persist data, even after their termination
 - They can only be mounted to one instance at a time (at the CCP level)
 - They are bound to a specific availability zone
-- Analogy: Think of them as a “network USB stick” 
+- Analogy: Think of them as a “network USB stick”
 - Free tier: 30 GB of free EBS storage of type General Purpose (SSD) or Magnetic per month
 
 ### EBS Volume
--  It’s a network drive (i.e. not a physical drive)
-    - It uses the network to communicate the instance, which means there might be a bit of latency
-    - It can be detached from an EC2 instance and attached to another one quickly
+
+- It’s a network drive (i.e. not a physical drive)
+  - It uses the network to communicate the instance, which means there might be a bit of latency
+  - It can be detached from an EC2 instance and attached to another one quickly
 - It’s locked to an Availability Zone (AZ)
   - An EBS Volume in us-east-1a cannot be attached to us-east-1b
   - To move a volume across, you first need to snapshot it
@@ -356,11 +381,11 @@ services were last accessed.
 
 ### EBS Overview
 
-  ![EBS Volume - Example](img/EBS%20Volume.png)
+![EBS Volume - Example](img/EBS%20Volume.png)
 
 ### EBS – Delete on Termination attribute
 
- ![EBS- Delete on Termination attribute](img/EBS%20-%20Delete%20on%20Termination.png)
+![EBS- Delete on Termination attribute](img/EBS%20-%20Delete%20on%20Termination.png)
 
 - Controls the EBS behaviour when an EC2 instance terminates
   - By default, the root EBS volume is deleted (attribute enabled)
@@ -369,14 +394,17 @@ services were last accessed.
 - **Use case: preserve root volume when instance is terminated**
 
 ### EBS Snapshots
+
 - Make a backup (snapshot) of your EBS volume at a point in time
 - Not necessary to detach volume to do snapshot, but recommended
 - Can copy snapshots across AZ or Region
 
 ![EBS snapshots](img/ebs%20snapshots.png)
 
-### EBS Snapshots 
+### EBS Snapshots
+
 - EBS Snapshot Archive
+
   - Move a snapshot to an "archive tier" that is 75% cheaper
   - Takes within 24 to 72 hours for restoring the archive
 
@@ -385,19 +413,21 @@ services were last accessed.
   - Specify retention (from 1 day to 1 year)
 
 ### AMI Overview
+
 - AMI = Amazon Machine Image
 - **AMI are a customization of an EC2 instance**
- - You add your own software, configuration, operating system, monitoring…
- - Faster boot / configuration time because all your software is pre-packaged
- - AMI are built for a specific region (and can be copied across regions)
- - You can launch EC2 instances from:
-   - A Public AMI: AWS provided
-   - Your own AMI: you make and maintain them yourself
-   - An AWS Marketplace AMI: an AMI someone else made (and potentially sells)
+- You add your own software, configuration, operating system, monitoring…
+- Faster boot / configuration time because all your software is pre-packaged
+- AMI are built for a specific region (and can be copied across regions)
+- You can launch EC2 instances from:
+  - A Public AMI: AWS provided
+  - Your own AMI: you make and maintain them yourself
+  - An AWS Marketplace AMI: an AMI someone else made (and potentially sells)
 
 ![AMI](img/ami.png)
 
 ### EC2 Image Builder
+
 - Used to automate the creation of Virtual Machines or container images
 - => Automate the creation, maintain, validate and test EC2 AMIs
 - Can be run on a schedule (weekly, whenever packages are updated, etc…)
@@ -406,18 +436,21 @@ services were last accessed.
 ![EC2 Image Builder](img/ec2-image-builder.png)
 
 ### EC2 Instance Store
+
 - EBS volumes are network drives with good but “limited” performance
 - If you need a high-performance hardware disk, use EC2 Instance Store
 - Better I/O performance
 - EC2 Instance Store lose their storage if they’re stopped (ephemeral)
 - Good for buffer / cache / scratch data / temporary content
 - Risk of data loss if hardware fails
-- Backups and Replication are your responsibility 
+- Backups and Replication are your responsibility
 
 ### Local EC2 Instance Store (high performance hardware attached volume)
+
 ![EC2 instance store](img/ec2-instance-store.png)
 
 ### EFS - Elastic File System
+
 - Managed NFS (network file system) that can be mounted on 100s of EC2
 - EFS works with Linux EC2 instances in multi-AZ
 - Highly available, scalable, expensive (3x gp2), pay per use, no capacity planning
@@ -428,20 +461,23 @@ services were last accessed.
 
 ![EBS vs EFS](img/ebs%20vs%20efs.png)
 
-| EBS    |EFS |
-| ----------- | ----------- |
-| To transfer EBS to different AZ, you have to make a copy of it (EBS snapshot),  and restore that copy to wanted AZ     | EFS makes a shared file system. All instances in AZs and mount the same EFS file |
+| EBS                                                                                                               | EFS                                                                              |
+| ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| To transfer EBS to different AZ, you have to make a copy of it (EBS snapshot), and restore that copy to wanted AZ | EFS makes a shared file system. All instances in AZs and mount the same EFS file |
 
 ### Shared Responsibility Model for EC2 Storage
-|AWS   |User|
-| ----------- | ----------- |
-| <ul><li>Infrastructure</li><li>Replication for data for EBS volumes & EFS drives</li><li>Replacing faulty hardware</li><li>Ensuring their employees cannot access your data</li></ul>    | <ul><li>Setting up backup / snapshot procedures</li><li>Setting up data encryption</li><li>Responsibility of any data on the drives</li><li>Understanding the risk of using EC2 Instance Store</li></ul>    |
 
-### Amazon FSx – Overview 
+| AWS                                                                                                                                                                                   | User                                                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <ul><li>Infrastructure</li><li>Replication for data for EBS volumes & EFS drives</li><li>Replacing faulty hardware</li><li>Ensuring their employees cannot access your data</li></ul> | <ul><li>Setting up backup / snapshot procedures</li><li>Setting up data encryption</li><li>Responsibility of any data on the drives</li><li>Understanding the risk of using EC2 Instance Store</li></ul> |
+
+### Amazon FSx – Overview
+
 - Launch 3rd party high-performance file systems on AWS
 - Fully managed service. ex: FSx for Lustre, FSx for Windows File Server, FSx for NetApp ONTAP
 
 ### Amazon FSx for windows File Server
+
 - A fully managed, high reliable, and scalable **Windows native** shared file system
 - Built on Windows File Server
 - Supports SMB protocol & Windows NTFS
@@ -449,10 +485,10 @@ services were last accessed.
 - Integrated with Microsoft Active Directory
 - Can be accessed from AWS or your on-premise infrastructure
 
-
 ![Amazon FSx](img/fsc.png)
 
 ### Amazon FSx for Lustre
+
 - A fully managed, high-performance, scalable file storage for High Performance Computing (HPC)
 - The name Lustre is derived from “Linux” and “cluster”
 - Machine Learning, Analytics, Video Processing, Financial Modeling, …
@@ -461,16 +497,141 @@ services were last accessed.
 ![Amazon FSx Lustre](img/fsx-lustre.png)
 
 ### EC2 Instance Storage - Summary
+
 - EBS volumes:
   - Network drives attached to one EC2 instance at a time
-  - Mapped to an Availability Zones 
-  - Can use EBS Snapshots for backups / transferring EBS volumes across AZ 
+  - Mapped to an Availability Zones
+  - Can use EBS Snapshots for backups / transferring EBS volumes across AZ
 - AMI: create ready-to-use EC2 instances with our customizations
 - EC2 Image Builder: automatically build, test and distribute AMIs
-- EC2 Instance Store: 
-  - High performance hardware disk attached to our EC2 instance 
+- EC2 Instance Store:
+  - High performance hardware disk attached to our EC2 instance
   - Lost if our instance is stopped / terminated
 - EFS: network file system, can be attached to 100s of instances in a region
-- EFS-IA: cost-optimized storage class for infrequent accessed files 
+- EFS-IA: cost-optimized storage class for infrequent accessed files
 - FSx for Windows: Network File System for Windows servers
 - FSx for Lustre: High Performance Computing Linux file system
+
+# ELB & ASG - ElasticLoad Balancing & Auto Scaling Groups
+
+## Elastic Load Balancing & Auto Scaling Groups
+
+- Scalability means that an application / system can handle greater loads by adapting.
+- There are two kinds of scalability:
+  - Vertical Scalability
+  - Horizontal Scalability (= elasticity)
+- Scalability is linked but different to High Availability
+
+### Vertical Scalability
+
+- Vertical Scalability means increasing the size of the instance
+- For example, your application runs on a t2.micro
+- Scaling that application vertically means running it on a t2.large
+- Vertical scalability is very common for non distributed systems, such as a database.
+- There’s usually a limit to how much you can vertically scale (hardware limit)
+
+![Vertical Scalability](img/vertical-scalability.png)
+
+### Horizontal Scalability
+
+- Horizontal Scalability means increasing the number of instances / systems for your application
+- Horizontal scaling implies distributed systems
+- This is very common for web applications / modern applications
+- It’s easy to horizontally scale thanks the cloud offerings such as Amazon EC2
+
+![Horizonttal Scalability](img/horizontal-scalability.png)
+
+### High Availability
+- High Availability usually goes hand in hand with horizontal scaling
+- High availability means running your application / system in at least 2 Availability Zones
+- The goal of high availability is to survive a data center loss (disaster)
+
+![Horizonttal Scalability](img/high-availability.png)
+
+### High Availability & Scalability for EC2
+
+-  Vertical Scaling: Increase instance size (= scale up / down)
+  - From: t2.nano - 0.5G of RAM, 1 vCPU
+  - To: u-12tb1.metal – 12.3 TB of RAM, 448 vCPUs
+- Horizontal Scaling: Increase number of instances (= scale out / in)
+  - Auto Scaling Group
+  - Load Balancer
+- High Availability: Run instances for the same application across multi AZ
+  - Auto Scaling Group multi AZ
+  - Load Balancer multi AZ
+
+### Scalability vs Elasticity (vs Agility)
+- Scalability: ability to accommodate a larger load by making the hardware stronger (scale up), or by adding nodes (scale out)
+- Elasticity: once a system is scalable, elasticity means that there will be some “auto-scaling” so that the system can scale based on the load. This is “cloud-friendly”: pay-per-use, match demand, optimize costs
+- Agility: (not related to scalability - distractor) new IT resources are only a click away, which means that you reduce the time to make those resources available to your developers from weeks to just minutes
+
+### Load Balancing
+- Load balancers are servers that forward internet traffic to multiple servers (EC2 Instances) downstream.
+
+![Load Balancer](img/load-balancer.png)
+
+### Why use Load balancer
+- Spread load across multiple downstream instances
+- Expose a single point of access (DNS) to your application
+- Seamlessly handle failures of downstream instances
+- Do regular health checks to your instances
+- Provide SSL termination (HTTPS) for your websites
+- High availability across zones
+
+### Why use an Elastic Load Balancer
+- An ELB (Elastic Load Balancer) is a managed load balancer
+  - AWS guarantees that it will be working
+  - AWS takes care of upgrades, maintenance, high availability
+  - AWS provides only a few configuration knobs
+- It costs less to setup your own load balancer but it will be a lot more effort on your end (maintenance, integrations)
+- 3 kinds of load balancers offered by AWS:
+  - Gateaway Load Balancer (will be covered later)
+  - Application Load Balancer (HTTP / HTTPS only) – Layer 7 
+  - Network Load Balancer (ultra-high performance, allows for TCP) – Layer 4 ( lower network than http)
+  - Classic Load Balancer (slowly retiring) – Layer 4 & 7
+
+### Auto Scaling Group
+- In real-life, the load on your websites and application can change. Ex: load will be increased during the day, less at night
+- In the cloud, you can create and get rid of servers very quickly
+- The goal of an Auto Scaling Group (ASG) is to:
+  - Scale out (add EC2 instances) to match an increased load
+  - Scale in (remove EC2 instances) to match a decreased load
+  - Ensure we have a minimum and a maximum number of machines running
+  - Automatically register new instances to a load balancer
+  - Replace unhealthy instances
+- Cost Savings: only run at an optimal capacity (principle of the cloud)
+
+![Auto Scaling group in AWS](img/auto-scaling-group.png)
+
+
+![Auto Scaling group with load balancer](img/auto-scaling-load-balancer.png)
+
+### Auto Scaling Groups - Scaling Strategies
+- Manual Scaling: Update the size of an ASG manually
+- Dynamic Scaling: Respond to changing demand
+  - Simple / Step Scaling
+    - When a CloudWatch alarm is triggered (example CPU > 70%), then add 2 units
+    - When a CloudWatch alarm is triggered (example CPU < 30%), then remove 1
+- Target Tracking Scaling
+  - Example: I want the average ASG CPU to stay at around 40%
+- Scheduled Scaling
+  - Anticipate a scaling based on known usage patterns
+  - Example: increase the min. capacity to 10 at 5 pm on Friday
+
+### Auto Scaling Groups – Scaling Strategies
+- Predictive Scaling
+  - Uses Machine Learning to predict future traffic ahead of time
+  - Automatically provisions the right number of EC2 instances in advance
+- Useful when your load has predictable time-based patterns
+
+
+![Auto Scaling - redictive Scaling](img/auto-scaling-predictive-scaling.png)
+- High Availability vs Scalability (vertical and horizontal) vs Elasticity vs Agility in the Cloud
+- Elastic Load Balancers (ELB)
+  - Distribute traffic across backend EC2 instances, can be Multi-AZ
+  - Supports health checks
+  - 3 types: Application LB (HTTP – L7), Network LB (TCP – L4), Classic LB (old)
+- Auto Scaling Groups (ASG)
+  - Implement Elasticity for your application, across multiple AZ
+  - Scale EC2 instances based on the demand on your system, replace unhealthy
+  - Integrated with the ELB
