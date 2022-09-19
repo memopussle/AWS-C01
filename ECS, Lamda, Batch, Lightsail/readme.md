@@ -116,8 +116,8 @@ Amazon EC2
 
 ## AWS Lambda Pricing: example
 - checkout here: https://aws.amazon.com/lambda/pricing/
-| Pay per calls  | Pay per duration: (in increment of 1 ms
-) |
+
+| Pay per calls  | Pay per duration: (in increment of 1 ms) |
 | ------------- | ------------- |
 | <ul><li>First 1,000,000 requests are free</li><li>$0.20 per 1 million requests thereafter ($0.0000002 per request)</li></ul>  | <ul><li>400,000 GB-seconds of compute time per month for FREE</li><li>== 400,000 seconds if function is 1GB RAM</li><li>== 3,200,000 seconds if function is 128 MB RAM</li><li>After that $1.00 for 600,000 GB-seconds</li></ul>  |
 
