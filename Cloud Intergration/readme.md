@@ -78,3 +78,5 @@
   - No message retention
 - Kinesis: real-time data streaming, persistence and analysis
 - Amazon MQ: managed Apache MQ in the cloud (MQTT, AMQP.. protocols)
+
+
