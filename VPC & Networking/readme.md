@@ -122,3 +122,4 @@ VPC: Virtual Private Cloud
 - Client VPN: OpenVPN connection from your computer into your VPC
 - Direct Connect: direct private connection to AWS
 - Transit Gateway: Connect thousands of VPC and on-premises networks together
+
