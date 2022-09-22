@@ -121,7 +121,7 @@ public cloud</td>
 
 ## AWS Overview
 
-### Cloud History
+## Cloud History
 
 ![Cloud history](img/example-types-cloud--computing.png)
 
@@ -133,7 +133,7 @@ public cloud</td>
   - Enterprise IT, backup & storage, Big data analytics,
   - Web hosting, Mobile & Social Apps
 
-#### AWS Global Infrastructure
+### AWS Global Infrastructure
 
 - AWS Regions
 - AWS Availability Zones
@@ -150,7 +150,7 @@ public cloud</td>
 - A region is a **cluster of data centers**
 - **Most AWS services are region-scoped**.So if you switch region, it will be refreshed
 
-### How to choose AWS region
+## How to choose AWS region
 
 - Compliance with data governance and legal
   requirements: data never leaves a region without
@@ -165,7 +165,7 @@ public cloud</td>
 | :---------------------------------------------------------: | :--------------------------: | :------------------------------------------------------------: | :----------------------------------------------------------------------------: |
 | data never leaves a region without your explicit permission | reduced latency (reduce lag) | new services and new features aren’t available in every Region | pricing varies region to region and is transparent in the service pricing page |
 
-### Availablity zones
+## Availablity zones
 
 - Each region has many (usually 3, min is 2, max is 6). Example:
 
@@ -183,14 +183,14 @@ public cloud</td>
 
 ![Availability Zones](img/AZ-availabilityzones.png)
 
-### AWS Points of Presence (Edge Locations)
+## AWS Points of Presence (Edge Locations)
 
 - Amazon has 216 points of presence (205 Edge Locations & || Regional Caches) in 84 cities across 42 countries
 - Content is delivered to end users with lower latency
 
 ![Point of Presence](img/point-presence.png)
 
-### Tour of AWS Console
+## Tour of AWS Console
 
 ![Tour of AWS Console](img/aws-console.png)
 
@@ -209,7 +209,7 @@ public cloud</td>
 
 ![IAM groups](img/IAM-groups.png)
 
-### IAM: Permissions
+## IAM: Permissions
 
 - Users or Groups can be
   assigned JSON documents
@@ -219,11 +219,11 @@ public cloud</td>
 
 ![IAM permissions](img/IAM-permissions.png)
 
-### IAM Policies inheritance
+## IAM Policies inheritance
 
 ![Policy inheritance - IAM](img/policies-inheritance.png)
 
-### IAM Policies Structure
+## IAM Policies Structure
 
 - Consist of:
 
@@ -239,7 +239,7 @@ public cloud</td>
 
   ![Policy Structure](img/policy-structure.png)
 
-### Password Policy
+## Password Policy
 
 - Strong passwords = higher security for your account
   - In AWS, you can setup a password policy:
@@ -253,7 +253,7 @@ public cloud</td>
 - Require users to change their password after some time (password expiration)
 - Prevent password re-use
 
-### Multi Factor Authentication - MFA
+## Multi Factor Authentication - MFA
 
 - Users have access to your account and can possibly change configurations or delete resources in your AWS account
 - **You want to protect your Root Accounts and IAM users**
@@ -266,7 +266,7 @@ public cloud</td>
 
 ![mfa options](img/mfa-options.png)
 
-### How can users access AWS?
+## How can users access AWS?
 
 - To access AWS, you have three options:
   - AWS Management Console (protected by password + MFA)
@@ -278,7 +278,7 @@ public cloud</td>
 - Access Key ID ~= username
 - Secret Access Key ~= password
 
-#### AWS CLI
+### AWS CLI
 
 - A tool that enables you to interact with AWS services using commands in
   your command-line shell
@@ -289,7 +289,7 @@ public cloud</td>
 
 ![Point of Presence](img/mfa-options.png)
 
-### AWS SDK
+## AWS SDK
 
 - AWS Software Development Kit (AWS SDK)
 - Language-specific APIs (set of libraries)
@@ -305,7 +305,7 @@ public cloud</td>
 
 - AWS CLI is built on AWS SDK for Python
 
-### IAM Roles for Services
+## IAM Roles for Services
 
 - Some AWS service will need to perform actions on your behalf
 - To do so, we will assign permissions to AWS services
@@ -318,7 +318,7 @@ public cloud</td>
 
   ![Policy Structure](img/IAM-roles.png)
 
-### IAM Security Tools
+## IAM Security Tools
 
 - IAM Credentials Report (account-level)
 
@@ -330,7 +330,7 @@ public cloud</td>
     services were last accessed.
   - You can use this information to revise your policies
 
-### IAM Guidlines & Best Practices
+## IAM Guidlines & Best Practices
 
 - Don't use the root account except for AWS account setup
 - One physical user = One AWS user
@@ -342,7 +342,7 @@ public cloud</td>
 - Audit permissions of your account with the IAM Credentials Report
 - Never share IAM users & Access Keys
 
-### Shared Responsibilitiy Model for IAM
+## Shared Responsibilitiy Model for IAM
 
 ![Shared Responsibilitiy Model for IAM](img/shared-reponse-IAM.png)
 
@@ -358,7 +358,7 @@ public cloud</td>
 - **Access Keys**: access AWS using the CLI or SDK
 - **Audit**: IAM Credential Reports & IAM Access Advisor
 
-### EC2 Instance Storage Section
+## EC2 Instance Storage Section
 
 - An EBS (Elastic Block Store) Volume is a network drive you can attach to your instances while they run
 - It allows your instances to persist data, even after their termination
@@ -367,7 +367,7 @@ public cloud</td>
 - Analogy: Think of them as a “network USB stick”
 - Free tier: 30 GB of free EBS storage of type General Purpose (SSD) or Magnetic per month
 
-### EBS Volume
+## EBS Volume
 
 - It’s a network drive (i.e. not a physical drive)
   - It uses the network to communicate the instance, which means there might be a bit of latency
@@ -379,11 +379,11 @@ public cloud</td>
   - You get billed for all the provisioned capacity
   - You can increase the capacity of the drive over time
 
-### EBS Overview
+## EBS Overview
 
 ![EBS Volume - Example](img/EBS%20Volume.png)
 
-### EBS – Delete on Termination attribute
+## EBS – Delete on Termination attribute
 
 ![EBS- Delete on Termination attribute](img/EBS%20-%20Delete%20on%20Termination.png)
 
@@ -393,7 +393,7 @@ public cloud</td>
 - This can be controlled by the AWS console / AWS CLI
 - **Use case: preserve root volume when instance is terminated**
 
-### EBS Snapshots
+## EBS Snapshots
 
 - Make a backup (snapshot) of your EBS volume at a point in time
 - Not necessary to detach volume to do snapshot, but recommended
@@ -401,7 +401,7 @@ public cloud</td>
 
 ![EBS snapshots](img/ebs%20snapshots.png)
 
-### EBS Snapshots
+## EBS Snapshots
 
 - EBS Snapshot Archive
 
@@ -412,7 +412,7 @@ public cloud</td>
   - Setup rules to retain deleted snapshots so you can recover them after an accidental deletion
   - Specify retention (from 1 day to 1 year)
 
-### AMI Overview
+## AMI Overview
 
 - AMI = Amazon Machine Image
 - **AMI are a customization of an EC2 instance**
@@ -426,7 +426,7 @@ public cloud</td>
 
 ![AMI](img/ami.png)
 
-### EC2 Image Builder
+## EC2 Image Builder
 
 - Used to automate the creation of Virtual Machines or container images
 - => Automate the creation, maintain, validate and test EC2 AMIs
@@ -435,7 +435,7 @@ public cloud</td>
 
 ![EC2 Image Builder](img/ec2-image-builder.png)
 
-### EC2 Instance Store
+## EC2 Instance Store
 
 - EBS volumes are network drives with good but “limited” performance
 - If you need a high-performance hardware disk, use EC2 Instance Store
@@ -445,7 +445,7 @@ public cloud</td>
 - Risk of data loss if hardware fails
 - Backups and Replication are your responsibility
 
-### Local EC2 Instance Store (high performance hardware attached volume)
+## Local EC2 Instance Store (high performance hardware attached volume)
 
 ![EC2 instance store](img/ec2-instance-store.png)
 
@@ -457,7 +457,7 @@ public cloud</td>
 
 ![ EFS - Elastic File System](img/efs.png)
 
-### Difference between EBS vs EFS
+## Difference between EBS vs EFS
 
 ![EBS vs EFS](img/ebs%20vs%20efs.png)
 
@@ -465,18 +465,18 @@ public cloud</td>
 | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | To transfer EBS to different AZ, you have to make a copy of it (EBS snapshot), and restore that copy to wanted AZ | EFS makes a shared file system. All instances in AZs and mount the same EFS file |
 
-### Shared Responsibility Model for EC2 Storage
+## Shared Responsibility Model for EC2 Storage
 
 | AWS                                                                                                                                                                                   | User                                                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <ul><li>Infrastructure</li><li>Replication for data for EBS volumes & EFS drives</li><li>Replacing faulty hardware</li><li>Ensuring their employees cannot access your data</li></ul> | <ul><li>Setting up backup / snapshot procedures</li><li>Setting up data encryption</li><li>Responsibility of any data on the drives</li><li>Understanding the risk of using EC2 Instance Store</li></ul> |
 
-### Amazon FSx – Overview
+## Amazon FSx – Overview
 
 - Launch 3rd party high-performance file systems on AWS
 - Fully managed service. ex: FSx for Lustre, FSx for Windows File Server, FSx for NetApp ONTAP
 
-### Amazon FSx for windows File Server
+## Amazon FSx for windows File Server
 
 - A fully managed, high reliable, and scalable **Windows native** shared file system
 - Built on Windows File Server
@@ -487,7 +487,7 @@ public cloud</td>
 
 ![Amazon FSx](img/fsc.png)
 
-### Amazon FSx for Lustre
+## Amazon FSx for Lustre
 
 - A fully managed, high-performance, scalable file storage for High Performance Computing (HPC)
 - The name Lustre is derived from “Linux” and “cluster”
@@ -496,7 +496,7 @@ public cloud</td>
 
 ![Amazon FSx Lustre](img/fsx-lustre.png)
 
-### EC2 Instance Storage - Summary
+## EC2 Instance Storage - Summary
 
 - EBS volumes:
   - Network drives attached to one EC2 instance at a time
@@ -522,7 +522,7 @@ public cloud</td>
   - Horizontal Scalability (= elasticity)
 - Scalability is linked but different to High Availability
 
-### Vertical Scalability
+## Vertical Scalability
 
 - Vertical Scalability means increasing the size of the instance
 - For example, your application runs on a t2.micro
@@ -532,7 +532,7 @@ public cloud</td>
 
 ![Vertical Scalability](img/vertical-scalability.png)
 
-### Horizontal Scalability
+## Horizontal Scalability
 
 - Horizontal Scalability means increasing the number of instances / systems for your application
 - Horizontal scaling implies distributed systems
@@ -541,7 +541,7 @@ public cloud</td>
 
 ![Horizonttal Scalability](img/horizontal-scalability.png)
 
-### High Availability
+## High Availability
 
 - High Availability usually goes hand in hand with horizontal scaling
 - High availability means running your application / system in at least 2 Availability Zones
@@ -549,7 +549,7 @@ public cloud</td>
 
 ![Horizonttal Scalability](img/high-availability.png)
 
-### High Availability & Scalability for EC2
+## High Availability & Scalability for EC2
 
 - Vertical Scaling: Increase instance size (= scale up / down)
 - From: t2.nano - 0.5G of RAM, 1 vCPU
@@ -561,19 +561,19 @@ public cloud</td>
   - Auto Scaling Group multi AZ
   - Load Balancer multi AZ
 
-### Scalability vs Elasticity (vs Agility)
+## Scalability vs Elasticity (vs Agility)
 
 - Scalability: ability to accommodate a larger load by making the hardware stronger (scale up), or by adding nodes (scale out)
 - Elasticity: once a system is scalable, elasticity means that there will be some “auto-scaling” so that the system can scale based on the load. This is “cloud-friendly”: pay-per-use, match demand, optimize costs
 - Agility: (not related to scalability - distractor) new IT resources are only a click away, which means that you reduce the time to make those resources available to your developers from weeks to just minutes
 
-### Load Balancing
+## Load Balancing
 
 - Load balancers are servers that forward internet traffic to multiple servers (EC2 Instances) downstream.
 
 ![Load Balancer](img/load-balancer.png)
 
-### Why use Load balancer
+## Why use Load balancer
 
 - Spread load across multiple downstream instances
 - Expose a single point of access (DNS) to your application
@@ -582,7 +582,7 @@ public cloud</td>
 - Provide SSL termination (HTTPS) for your websites
 - High availability across zones
 
-### Why use an Elastic Load Balancer
+## Why use an Elastic Load Balancer
 
 - An ELB (Elastic Load Balancer) is a managed load balancer
   - AWS guarantees that it will be working
@@ -595,7 +595,7 @@ public cloud</td>
   - Network Load Balancer (ultra-high performance, allows for TCP) – Layer 4 ( lower network than http)
   - Classic Load Balancer (slowly retiring) – Layer 4 & 7
 
-### Auto Scaling Group
+## Auto Scaling Group
 
 - In real-life, the load on your websites and application can change. Ex: load will be increased during the day, less at night
 - In the cloud, you can create and get rid of servers very quickly
@@ -611,7 +611,7 @@ public cloud</td>
 
 ![Auto Scaling group with load balancer](img/auto-scaling-load-balancer.png)
 
-### Auto Scaling Groups - Scaling Strategies
+## Auto Scaling Groups - Scaling Strategies
 
 - Manual Scaling: Update the size of an ASG manually
 - Dynamic Scaling: Respond to changing demand
@@ -624,7 +624,7 @@ public cloud</td>
   - Anticipate a scaling based on known usage patterns
   - Example: increase the min. capacity to 10 at 5 pm on Friday
 
-### Auto Scaling Groups – Scaling Strategies
+## Auto Scaling Groups – Scaling Strategies
 
 - Predictive Scaling
   - Uses Machine Learning to predict future traffic ahead of time
@@ -644,9 +644,9 @@ public cloud</td>
   - Scale EC2 instances based on the demand on your system, replace unhealthy
   - Integrated with the ELB
 
-  ## S3
+ # S3
 
-### Section introduction
+## Section introduction
 
 - Amazon S3 is one of the main building blocks of AWS
 - It’s advertised as ”infinitely scaling” storage
@@ -656,7 +656,7 @@ public cloud</td>
 - We’ll have a step-by-step approach to S3
 - The CCP exam requires “deeper” knowledge about S3
 
-### S3 Use cases
+## S3 Use cases
 
 - Backup and storage
 - Disaster Recovery
@@ -668,7 +668,7 @@ public cloud</td>
 - Software delivery
 - Static website
 
-### Amazon S3 Overview -Buckets
+## Amazon S3 Overview -Buckets
 
 - Amazon S3 allows people to store objects (files) in “buckets” (directories)
 - Buckets must have a globally unique name (across all regions all accounts)
@@ -681,7 +681,7 @@ public cloud</td>
   - Not an IP
   - Must start with lowercase letter or number
 
-### Amazon S3 Overview - Objects
+## Amazon S3 Overview - Objects
 
 - Objects (files) have a Key
 - The key is the FULL path:
@@ -699,7 +699,7 @@ public cloud</td>
 - Tags (Unicode key / value pair – up to 10) – useful for security / lifecycle
 - Version ID (if versioning is enabled)
 
-### S3 Security
+## S3 Security
 
 - User based
   - IAM policies - which API calls should be allowed for a specific user from IAM console
@@ -710,7 +710,7 @@ public cloud</td>
   - AND there’s no explicit DENY
 - Encryption: encrypt objects in Amazon S3 using encryption keys
 
-#### Example of S3 security
+### Example of S3 security
 
 1. Public Access - Use Bucket Policy
 
@@ -728,7 +728,7 @@ public cloud</td>
 
 ![ Cross-accoutn Acess](img/cross-account-bucket.png)
 
-### S3 Bucket Policies
+## S3 Bucket Policies
 
 - JSON based policies
   - Resources: buckets and objects
@@ -743,13 +743,13 @@ public cloud</td>
 
   ![  S3 Bucket Policies](img/S3-bucket-policies.png)
 
-### Bucket settings for Block Public Access
+## Bucket settings for Block Public Access
 
 - These settings were created to prevent company data leaks
 - If you know your bucket should never be public, leave these on
 - Can be set at the account leve
 
-### S3 Websites Overview
+## S3 Websites Overview
 
 - S3 can host static websites and have them accessible on the www
 - The website URL will be:
@@ -757,7 +757,7 @@ public cloud</td>
   - <bucket-name>.s3-website.<AWS-region>.amazonaws.com
 - **If you get a 403 (Forbidden) error, make sure the bucket policy allows public reads!**
 
-### S3 Versioning Overview
+## S3 Versioning Overview
 
 - You can version your files in Amazon S3
 - It is enabled at the bucket level
@@ -769,7 +769,7 @@ public cloud</td>
   - Any file that is not versioned prior to enabling versioning will have version “null”
   - Suspending versioning does not delete the previous versions
 
-### S3 Access Logs
+## S3 Access Logs
 
 - For audit purpose, you may want to log all access to S3 buckets
 - Any request made to S3, from any account, authorized or denied, will be logged into another S3 bucket
@@ -783,7 +783,7 @@ public cloud</td>
 - That data can be analyzed using data analysis tools…
 - Very helpful to come down to the root cause of an issue, or audit usage, view suspicious patterns, etc…
 
-### S3 Replication (CRR & SRR)
+## S3 Replication (CRR & SRR)
 
 - Must enable versioning in source and destination
 - Cross Region Replication (CRR)
@@ -794,7 +794,7 @@ public cloud</td>
 - CRR - Use cases: compliance, lower latency access, replication across accounts
 - SRR – Use cases: log aggregation, live replication between production and test accounts
 
-### S3 Storage Classes
+## S3 Storage Classes
 
 - Amazon S3 Standard - General Purpose
 - Amazon S3 Standard-Infrequent Access (IA)
@@ -806,7 +806,7 @@ public cloud</td>
 
 - Can move between classes manually or using S3 Lifecycle configurations
 
-### S3 Durability and Availability
+## S3 Durability and Availability
 
 - Durability:
   - High durability (99.999999999%, 11 9’s) of objects across multiple AZ
@@ -817,7 +817,7 @@ public cloud</td>
   - Varies depending on storage class
   - Example: S3 standard has 99.99% availability = not available 53 minutes a year
 
-### S3 Standard - General Purpose
+## S3 Standard - General Purpose
 
 - 99.99% Availability
 - Used for frequently accessed data
@@ -825,7 +825,7 @@ public cloud</td>
 - Sustain 2 concurrent facility failures
 - Use Cases: Big Data analytics, mobile & gaming applications, content distribution…
 
-### S3 Storage Classes – Infrequent Access
+## S3 Storage Classes – Infrequent Access
 
 - For data that is less frequently accessed, but requires rapid access when needed
 - Lower cost than S3 Standard
@@ -924,11 +924,11 @@ transit</li></ul>    |
 - That's when AWS Sow Family comes in: **offline devices to perform data migrations**
 - If it takes more than a week to transfer over the network, use Snowball devices!
 
-#### Diagrams
+## Diagrams
 
 ![snow diagram](img/snow-diagram.png)
 
-### Snowball Edge (for data transfers)
+## Snowball Edge (for data transfers)
 - Physical data transport solution: move TBs or PBs of data in or out of AWS
 - Alternative to moving data over the network (and paying network fees)
 - Pay per data transfer job
@@ -939,7 +939,7 @@ transit</li></ul>    |
   - 42 TB of HDD capacity for block volume and S3 compatible object storage
 - Use cases: large data cloud migrations, DC decommission, disaster recovery
 
-### AWS Snowcone
+## AWS Snowcone
 - Small, portable computing, anywhere, rugged & secure, withstands harsh environments
 - Light (4.5 pounds, 2.1 kg) 
 - Device used for edge computing, storage, and data transfer
@@ -948,7 +948,7 @@ transit</li></ul>    |
 -  Must provide your own battery / cables 
 - Can be sent back to AWS offline, or connect it to internet and use AWS DataSync to send data
 
-### AWS Snowmobile ( like a truck)
+## AWS Snowmobile ( like a truck)
 - Transfer exabytes of data (1 EB = 1,000 PB = 1,000,000 TBs)
 - Each Snowmobile has 100 PB of capacity (use multiple in parallel)
 - High security: temperature controlled, GPS, 24/7 video surveillance
@@ -956,7 +956,7 @@ transit</li></ul>    |
 
 ![Snow family for data migration](img/aws-snow-fam.png)
 
-### Snow Family – Usage Process
+## Snow Family – Usage Process
 1. Request Snowball devices from the AWS console for delivery
 2. Install the snowball client / AWS OpsHub on your servers
 3. Connect the snowball to your servers and copy files using the client
@@ -964,7 +964,7 @@ transit</li></ul>    |
 5. Data will be loaded into an S3 bucket
 6. Snowball is completely wiped
 
-### What is Edge Computing
+## What is Edge Computing
 - Process data while it’s being created on an edge location (no access to internet)
   - Ex: A truck on the road, a ship on the sea, a mining station underground... 
 - These locations may have
@@ -977,7 +977,7 @@ transit</li></ul>    |
   - Transcoding media streams
 - Eventually (if need be) we can ship back the device to AWS (for transferring data for example)
 
-### Snow Family – Edge Computing 
+## Snow Family – Edge Computing 
 - Snowcone (smaller)
   - 2 CPUs, 4 GB of memory, wired or wireless access
   - USB-C power using a cord or the optional battery
@@ -991,7 +991,7 @@ transit</li></ul>    |
 - All: Can run EC2 Instances & AWS Lambda functions (using AWS IoT Greengrass)
 - Long-term deployment options: 1 and 3 years discounted pricing
 
-### AWS OpsHub
+## AWS OpsHub
 - Historically, to use Snow Family devices, you needed a CLI (Command Line Interface tool)
 - Today, you can use AWS OpsHub (a software you install on your computer / laptop) to manage your Snow Family Device
   - Unlocking and configuring single or clustered devices
@@ -1003,7 +1003,7 @@ transit</li></ul>    |
   - Launch compatible AWS services on your devices
   (ex: Amazon EC2 instances, AWS DataSync, Network File System (NFS))
 
-### Hybrid Cloud for Storage
+## Hybrid Cloud for Storage
 - AWS is pushing for ”hybrid cloud”
  - Part of your infrastructure is on-premises
  - Part of your infrastructure is on the cloud
@@ -1015,10 +1015,10 @@ transit</li></ul>    |
 - S3 is a proprietary storage technology (unlike EFS / NFS), so how do you expose the S3 data on-premise?
 - AWS Storage Gateway!
 
-### AWS Storage Cloud Native Options
+## AWS Storage Cloud Native Options
 ![ AWS Storage Cloud Native Options](img/AWS-storage-cloud-native.png)
 
-### AWS Storage Gateway
+## AWS Storage Gateway
 - Bridge between on-premise data and cloud data in S3
 - Hybrid storage service to allow on- premises to seamlessly use the AWS Cloud
 - Use cases: disaster recovery, backup & restore, tiered storage
@@ -1030,19 +1030,19 @@ transit</li></ul>    |
 
 ![AWS Storage Gateaway](img/aws-storage-gateaway.png)
 
-### AWS S3- Summary
-- Buckets vs Objects: global unique name, tied to a region
-- S3 security: IAM policy, S3 Bucket Policy (public access), S3 Encryption
-- S3 Websites: host a static website on Amazon S3
-- S3 Versioning: multiple versions for files, prevent accidental deletes
-- S3 Access Logs: log requests made within your S3 bucket
-- S3 Replication: same-region or cross-region, must enable versioning
-- S3 Storage Classes: Standard, IA, 1Z-IA, Intelligent, Glacier, Glacier Deep Archive
-- S3 Lifecycle Rules: transition objects between classes
-- S3 Glacier Vault Lock / S3 Object Lock: WORM (Write Once Read Many)
-- Snow Family: import data onto S3 through a physical device, edge computing
-- OpsHub: desktop application to manage Snow Family devices
-- Storage Gateway: hybrid solution to extend on-premises storage to S3
+## AWS S3- Summary
+- **Buckets vs Objects**: global unique name, tied to a region
+- **S3 security**: IAM policy, S3 Bucket Policy (public access), S3 Encryption
+- **S3 Websites**: host a static website on Amazon S3
+- **S3 Versioning**: multiple versions for files, prevent accidental deletes
+- **S3 Access Logs**: log requests made within your S3 bucket
+- **S3 Replication**: same-region or cross-region, must enable versioning
+- **S3 Storage Classes****: Standard, IA, 1Z-IA, Intelligent, Glacier, Glacier Deep Archive
+- **S3 Lifecycle Rules**: transition objects between classes
+- **S3 Glacier Vault Lock / S3 Object Lock**: WORM (Write Once Read Many)
+- **Snow Family**: import data onto S3 through a physical device, edge computing
+- **OpsHub**: desktop application to manage Snow Family devices
+- **Storage Gateway**: hybrid solution to extend on-premises storage to S3
 
 # Database Intro
 - Storing data on disk (EFS, EBS, EC2 Instance Store, S3) can have its limits 
@@ -1053,13 +1053,13 @@ transit</li></ul>    |
 
 - Databases are **optimized for a purpose** and come with different features, shapes and constraints
 
-### Relational Databases
+## Relational Databases
 - Looks just like Excel spreadsheets, with links between them!
 - Can use the SQL language to perform queries / lookups
 
 ![Relational database](img/relational_database.png)
 
-### NoSQL Databases
+## NoSQL Databases
 - NoSQL = non-SQL = non relational databases
 - NoSQL databases are purpose built for specific data models and have flexible schemas for building modern applications.
 - Benefits:
@@ -1069,7 +1069,7 @@ transit</li></ul>    |
   - Highly functional: types optimized for the data model
 - Ex:: Key-value, document, graph, in-memory, search databases
 
-### NoSQL data example: JSON
+## NoSQL data example: JSON
 - JSON = JavaScript Object Notation
 - JSON is a common form of data that fits into a NoSQL model
 - Data can be nested
@@ -1078,7 +1078,7 @@ transit</li></ul>    |
 
 ![JSON](img/json.png)
 
-### Databases & Shared Responsibility on AWS
+## Databases & Shared Responsibility on AWS
 - AWS offers use to manage different databases
 - Benefits include: 
   - Quick Provisioning, High Availability, Vertical and Horizontal Scaling
@@ -1087,7 +1087,7 @@ transit</li></ul>    |
   - Monitoring, alerting
 - Note: many databases technologies could be run on EC2, but you must handle yourself the resiliency, backup, patching, high availability, fault tolerance, scaling… 
 
-### AWS RDS Overview
+## AWS RDS Overview
 - RDS stands for Relational Database Service
 - It’s a managed DB service for DB use SQL as a query language
 - It allows you to create databases in the cloud that are managed by AWS
@@ -1098,7 +1098,7 @@ transit</li></ul>    |
   - Microsoft SQL Server
   - Aurora (AWS Proprietary database)
 
-### Advantage over using RDS versus deploying DB on EC2
+## Advantage over using RDS versus deploying DB on EC2
 
 - RDS is a managed service:
   - Automated provisioning, OS patching
@@ -1112,11 +1112,11 @@ transit</li></ul>    |
 - BUT you can’t SSH into your instances
 
 
-### RDS Solution Architecture 
+## RDS Solution Architecture 
 
 ![RDS Solution Architect](img/RDS_Architecture.png)
 
-### Amazon Aurora
+## Amazon Aurora
 - Aurora is a proprietary technology from AWS (not open sourced)
 - PostgreSQL and MySQL are both supported as Aurora DB 
 - Aurora is “AWS cloud optimized” and claims 5x performance improvement over MySQL on RDS, over 3x the performance of Postgres on RDS
@@ -1126,27 +1126,27 @@ transit</li></ul>    |
 
 ![Aurora](img/aurora.png)
 
-### Aurora vs RDS
+## Aurora vs RDS
 - Both managed relational database
 - Aurora: more cloud native
 - RDS: technology that you know directly as managed service
 
-### RDS Deployments: Read Replicas, Multi-AZ
+## RDS Deployments: Read Replicas, Multi-AZ
 
 | Read Replicas | Multi-AZ   |  Multi-region
 |---|---|---|
 |<ul><li> Scale the read workload of your DB</li><li>Can create up to 5 Read Replicas</li><li>Data is only written to the main DB</li></ul>  | <ul><li>Failover in case of AZ outage (high availability)</li><li>Data is only read/written to the main database</li><li>Can only have 1 other AZ as failove</li></ul>  | <ul><li>Disaster recovery in case of region issue</li><li>Local performance for global reads</li><li>Replication cost</li></ul>   |
 
-#### Read replicas
+## Read replicas
 ![Read replica](img/rsd-read-replicas.png)
 
-#### Multi-AZ
+## Multi-AZ
 ![Multi-AZ](img/multi-az-rds.png)
 
 ### Multi-region
 ![multi-region](img/multi-region.png)
 
-### Amazon ElastiCache Overview
+## Amazon ElastiCache Overview
 - The same way RDS is to get managed Relational Databases…
 - ElastiCache is to get managed Redis or Memcached
 - Caches are in-memory databases with high performance, low latency
@@ -1154,12 +1154,12 @@ transit</li></ul>    |
 
 - AWS takes care of OS maintenance / patching, optimizations, setup, configuration, monitoring, failure recovery and backups
 
-### ElastiCache - Solution Architecture - Cache
+## ElastiCache - Solution Architecture - Cache
 
 ![ElastiCache - Solution Architecture - Cache](img/elastiCache-cache.png)
 
 
-### DynamoDB
+## DynamoDB
 - Fully Managed Highly available with replication across 3 AZ
 - **NoSQL database - not a relational database**
 - Scales to massive workloads, distributed “serverless” database
@@ -1170,12 +1170,12 @@ transit</li></ul>    |
 - Low cost and auto scaling capabilities
 - Standard & Infrequent Access (IA) Table Class
 
-### DynamoDB - type of data
+## DynamoDB - type of data
 - DynamoDB is a key/value database
 
 ![DynamoDB](img/dynamodb.png)
 
-### DynamoDB Accelerator - DAX
+## DynamoDB Accelerator - DAX
 - Fully Managed in-memory cache for DynamoDB
 - 10x performance improvement – single- digit millisecond latency to microseconds latency – when accessing your DynamoDB tables
 - Secure, highly scalable & highly available
@@ -1183,7 +1183,7 @@ transit</li></ul>    |
 
 ![DynamoDB Accelerator](img/dax-dynamodb.png)
 
-### DynamoDB – Global Tables
+## DynamoDB – Global Tables
 - Make a DynamoDB table accessible with low latency in multiple-regions
 - Active-Active replication (read/write to any AWS Region)
 
@@ -1199,16 +1199,16 @@ transit</li></ul>    |
 - Has a SQL interface for performing the queries
 - BI tools such as AWS Quicksight or Tableau integrate with it
 
-### Amazon EMR
+## Amazon EMR
 - EMR stands for “Elastic MapReduce”
-- EMR helps creating Hadoop clusters (Big Data) to analyze and process vast amount of data
+- EMR helps creating **Hadoop clusters** (Big Data) to analyze and process vast amount of data
 - The clusters can be made of hundreds of EC2 instances
 - Also supports Apache Spark, HBase, Presto, Flink…
 - EMR takes care of all the provisioning and configuration
 - Auto-scaling and integrated with Spot instances
 - Use cases: data processing, machine learning, web indexing, big data…
 
-### Amazon Athena
+## Amazon Athena
 - Serverless query service to analyze data stored in Amazon S3
 - Uses standard SQL language to query the files
 - Supports CSV, JSON, ORC, Avro, and Parquet (built on Presto)
@@ -1220,7 +1220,7 @@ transit</li></ul>    |
 
 ![Athena - service to analyze data in S3 bucket](img/athena-data-analyze-s3-bucket.png)
 
-### Amazon QuickSight
+## Amazon QuickSight
 - Serverless machine learning-powered business intelligence service to create interactive dashboards
 - Fast, automatically scalable, embeddable, with per-session pricing
 - Use cases:
@@ -1232,7 +1232,7 @@ transit</li></ul>    |
 
 ![QuickSight](img/quicksight-aws.png)
 
-### DocumentDB
+## DocumentDB
 - DocumentDB is the same for **MongoDB - (which is a NoSQL database)**
 - MongoDB is used to store, query, and index JSON data
 - Similar “deployment concepts” as Aurora
@@ -1241,7 +1241,7 @@ transit</li></ul>    |
 - Automatically scales to workloads with millions of requests per seconds
 
 
-### Amazon Neptune
+## Amazon Neptune
 - Fully managed **graph** database
 - A popular **graph dataset** would be a **social network**
   - Users have friends 
@@ -1254,7 +1254,7 @@ transit</li></ul>    |
 - Highly available with replications across multiple AZs 
 - Great for knowledge graphs (Wikipedia), fraud detection, recommendation engines, social networking
 
-### Amazon QLDB
+## Amazon QLDB
 - QLDB stands for ”Quantum Ledger Database”
 - A ledger is a book recording financial transactions
 - Fully Managed, Serverless, High available, Replication across 3 AZ
@@ -1265,14 +1265,14 @@ transit</li></ul>    |
 - 2-3x better performance than common ledger blockchain frameworks, manipulate data using SQL
 - Difference with Amazon Managed Blockchain: no decentralization component, in accordance with financial regulation rules
 
-### Amazon Managed Blockchain (decentralized blockchain)
+## Amazon Managed Blockchain (decentralized blockchain)
 - Blockchain makes it possible to build applications where multiple parties can execute transactions without the need for a trusted, central authority.
 - Amazon Managed Blockchain is a managed service to:
 - Join public blockchain networks
 - Or create your own scalable private network
 - Compatible with the frameworks Hyperledger Fabric & Ethereum
 
-### AWS Glue 
+## AWS Glue 
 
 - Managed **extract, transform, and load (ETL)** service 
 - Useful to prepare and transform data for analytics 
@@ -1283,14 +1283,14 @@ transit</li></ul>    |
 - Glue Data Catalog: catalog of datasets 
   - can be used by Athena, Redshift, EMR 
 
-### DMS – Database Migration Service
+## DMS – Database Migration Service
 - Quickly and securely migrate databases to AWS, resilient, self healing
 - The source database remains available during the migration
 - Supports:
   - Homogeneous migrations: ex Oracle to Oracle
   - Heterogeneous migrations: ex Microsoft SQL Server to Aurora
 
-### Databases & Analytics Summary in AWS
+## Databases & Analytics Summary in AWS
 - Relational Databases - OLTP: RDS & Aurora (SQL)
 - Differences between Multi-AZ, Read Replicas, Multi-Region
 - In-memory Database: ElastiCache
@@ -1318,7 +1318,7 @@ transit</li></ul>    |
   - Works with any language, any OS, any technology
 - Scale containers up and down very quickly (seconds)
 
-### Docker on an OS
+## Docker on an OS
 
 ![docker on OS](img/docker-on-os.png)
 
@@ -1500,7 +1500,7 @@ Amazon EC2
   - I want a load balancer (ELB) in front of these machines
 - Then CloudFormation creates those for you, in the **right order**, with the **exact configuration** that you specify
 
-### Benefits of AWS CloudFormation 
+## Benefits of AWS CloudFormation 
 
 - **Infrastructure as code**
   - No resources are manually created, which is excellent for control
@@ -2574,3 +2574,519 @@ certificates
   - Close your AWS account
   - Change or cancel your AWS Support plan
   - Register as a seller in the Reserved Instance Marketplace
+
+# Machine Learning
+
+## Amazon Rekognition
+- Find **objects, people, text, scenes** in **images and videos** using ML
+- **Facial analysis** and **facial search** to do user verification, people counting
+- Create a database of “familiar faces” or compare against celebrities
+- Use cases:
+- Labeling
+- Content Moderation
+- Text Detection
+- Face Detection and Analysis (gender, age range, emotions…)
+- Face Search and Verification
+- Celebrity Recognition
+- Pathing (ex: for sports game analysis)
+
+## Amazon Transcribe
+- Automatically **convert speech to text**
+- Uses a **deep learning process** called automatic speech recognition (ASR) to convert speech to text quickly and accurately
+- **Automatically remove Personally Identifiable Information (PII) using Redaction**
+- Use cases:
+  - transcribe customer service calls
+  - automate closed captioning and subtitling
+  - generate metadata for media assets to create a fully searchable archive
+
+## Amazon Polly
+- Turn text into lifelike speech using deep learning 
+- Allowing you to create applications that talk
+
+![Amazon Polly](img/aws-polly.png)
+
+## Amazon Translate
+- Natural and accurate **language translation**
+-  Amazon Translate allows you to **localize content** - such as websites and applications - for **international users**, and to easily translate large volumes of text efficiently.
+
+![Amazon Translate](img/translate.png)
+
+## Amazon Lex & Connect
+- Amazon Lex: (same technology that powers **Alexa**)
+  - Automatic Speech Recognition (ASR) to convert speech to text
+  - Natural Language Understanding to recognize the intent of text, callers
+  - Helps build chatbots, call center bots
+- Amazon Connect:
+  - Receive calls, create contact flows, cloud-based **virtual contact center**
+  - Can integrate with other CRM systems or AWS
+  - No upfront payments, 80% cheaper than traditional contact center solutions
+
+![Amazon Lex & Connect](img/lex-connect.png)
+
+## Amazon Comprehend
+- For **Natural Language Processing – NLP**
+- Fully managed and serverless service
+- Uses machine learning to find insights and relationships in text
+  - Language of the text
+  - Extracts key phrases, places, people, brands, or events
+  - Understands how positive or negative the text is
+  - Analyzes text using tokenization and parts of speech
+  - Automatically organizes a collection of text files by topic
+- Sample use cases:
+  - analyze customer interactions (emails) to find what leads to a positive or negative experience
+  - Create and groups articles by topics that Comprehend will uncover
+
+## Amazon SageMaker
+- Fully managed service for developers / data scientists to build ML models
+- Typically, difficult to do all the processes in one place + provision servers
+- Machine learning process (simplified): predicting your exam score
+
+![SageMaker](img/sageMaker.png)
+
+## Amazon Forcast
+- Fully managed service that uses ML to deliver highly accurate forecasts
+- Example: predict the future sales of a raincoat
+- 50% more accurate than looking at the data itself
+- Reduce forecasting time from months to hours
+- Use cases: Product Demand Planning, Financial Planning, Resource Planning, …
+
+![amazon Forecast](img/amazon-forecast.png)]
+
+## Amazon Kendra
+- Fully managed **document search service** powered by Machine Learning
+- Extract answers from within a document (text, pdf, HTML, PowerPoint, MS Word, FAQs…)
+- Natural language search capabilities
+- Learn from user interactions/feedback to promote preferred results (Incremental Learning)
+- Ability to manually fine-tune search results (importance of data, freshness, custom, …)
+
+![kendra](img/kendra.png)
+
+## Amazon Personalize
+- Fully managed ML-service to build apps with real-time **personalized recommendations**
+- Example: personalized product recommendations/re-ranking, customized direct marketing
+- Example: User bought gardening tools, provide recommendations on the next one to buy
+- Same technology used by Amazon.com
+- Integrates into existing websites, applications, SMS, email marketing systems, …
+- Implement in days, not months (you don’t need to build, train, and deploy ML solutions)
+- Use cases: retail stores, media and entertainment…
+
+![personalize](img/amazon-personalize.png)
+
+## Amazon Textract
+- Automatically extracts text, handwriting, and data from any scanned documents using AI and ML
+
+![texttract](img/text-tract.png)
+
+## Summary: Machine Learning
+- **Rekognition**: face detection, labeling, celebrity recognition
+- **Transcribe**: audio to text (ex: subtitles) 
+- **Polly**: text to audio 
+- **Translate**: translations 
+- **Lex**: build conversational bots – chatbots 
+- **Connect**: cloud contact center 
+- **Comprehend**: natural language processing 
+- **SageMaker**: machine learning for every developer and data scientist 
+- **Forecast**: build highly accurate forecasts 
+- **Kendra**: ML-powered search engine 
+- **Personalize**: real-time personalized recommendations 
+- **Textract**: detect text and data in documents
+
+# Billing & Support
+- Global service
+- Allows to manage **multiple AWS accounts**
+- The main account is the master account
+- Cost Benefits:
+- **Consolidated Billing** across all accounts - single payment method
+- Pricing benefits from **aggregated usage** (volume discount for EC2, S3…)
+- **Pooling of Reserved EC2 instances** for optimal savings
+- API is available to **automate AWS account creation**
+- **Restrict account privileges using Service Control Policies (SCP)**
+
+## Multi Account Strategies
+- Create accounts per **department**, per **cost center**, per **dev / test / prod**, based on regulatory restrictions (using SCP), for better **resource isolation** (ex: VPC), to have **separate per-account service limits**, isolated account for **logging**
+- Multi Account vs One Account Multi VPC
+- Use tagging standards for billing purposes
+- Enable CloudTrail on all accounts, send logs to central S3 account
+- Send CloudWatch Logs to central logging account
+
+## Organizational Units (OU) - Examples
+
+![Organization Unit](img/organization-unit.png)
+
+## AWS Organization
+
+![AWS Organization](img/aws-organization.png)
+
+## Service Control Policies (SCP)
+- Whitelist or blacklist IAM actions
+- Applied at the **OU** or **Account level**
+- Does not apply to the Master Account
+- SCP is applied to all the **Users and Roles** of the Account, including Root user
+- The SCP does not affect service-linked roles
+- Service-linked roles enable other AWS services to integrate with AWS Organizations and can't be restricted by SCPs.
+- SCP must have an explicit Allow (does not allow anything by default)
+- Use cases:
+- Restrict access to certain services (for example: can’t use EMR)
+- Enforce PCI compliance by explicitly disabling services
+
+## SCP Hierarchy
+
+![SCP Hierachy](img/scp-hierachy.png)
+
+## SCP Examples Blacklist and Whitelist strategies
+
+![ Blacklist and Whitelist](img/blacklist-vs-whitelist.png)
+
+## AWS Organization – Consolidated Billing
+- When enabled, provides you with:
+- **Combined Usage** – combine the usage across all AWS accounts in the AWS Organization to **share the volume pricing, Reserved Instances and Savings Plans discounts**
+- **One Bill** – get one bill for all AWS Accounts in the AWS Organization
+- The management account can turn off Reserved Instances discount sharing for any account in the AWS Organization, including itself
+
+![AWS Consolidated Billing](img/consolidated-billing.png)
+
+## AWS Control Tower
+- Easy way to **set up and govern a secure and compliant multi-account AWS environment** based on best practices
+- Benefits:
+- Automate the set up of your environment in a few clicks
+- Automate ongoing policy management using guardrails
+- Detect policy violations and remediate them
+- Monitor compliance through an interactive dashboard
+- AWS Control Tower runs on top of AWS Organizations:
+- It automatically sets up AWS Organizations to organize accounts and implemen SCPs (Service Control Policies)
+
+## Pricing Models in AWS
+- AWS has 4 pricing models:
+- **Pay as you go**: pay for what you use, remain agile, responsive, meet scale demands
+- **Save when you reserve**: minimize risks, predictably manage budgets, comply with long-terms requirements
+- Reservations are available for EC2 Reserved Instances, DynamoDB Reserved Capacity, ElastiCache Reserved Nodes, RDS Reserved Instance, Redshift Reserved Nodes
+- **Pay less by using more**: volume-based discounts
+- **Pay less as AWS grows**
+
+## Free Services & free tier in AWS
+
+- IAM
+- VPC
+- Consolidated Billing
+- **You do pay for the resource created**
+  - Elastic Beanstalk
+  - CloudFormation
+  - Auto Scaling Groups
+  - Free Tier: https://aws.amazon.com/free/
+    - EC2 t2.micro instance for a year
+    - S3, EBS, ELB, AWS Data transfer
+
+## Compute Pricing - EC2
+- Only charged for what you use 
+- Number of instances 
+- Instance configuration: 
+  - Physical capacity 
+  - Region 
+  - OS and software 
+  - Instance type 
+  - Instance size 
+- ELB running time and amount of data processed 
+- Detailed monitoring
+
+## Compute Pricing - EC2
+- **On-demand instances**: 
+  - Minimum of 60s 
+  - Pay per second (Linux/Windows) or per hour (other) 
+- **Reserved instances**: 
+  - Up to 75% discount compared to On-demand on hourly rate 
+  - 1- or 3-years commitment 
+  - All upfront, partial upfront, no upfront 
+- **Spot instances**: 
+  - Up to 90% discount compared to On-demand on hourly rate 
+  - Bid for unused capacity 
+- **Dedicated Host**: 
+  - On-demand 
+  - Reservation for 1 year or 3 years commitment 
+- **Savings plans** as an alternative to save on sustained usage
+
+## Compute Pricing – Lambda & ECS
+- Lambda: 
+  - Pay per call 
+  - Pay per duration 
+- ECS: 
+  - EC2 Launch Type Model: No additional fees, you pay for AWS resources stored and created in your application
+- Fargate:
+  - Fargate Launch Type Model: Pay for vCPU and memory resources allocated to your applications in your containers
+
+## Storage Pricing – S3
+- **Storage class**: S3 Standard, S3 Infrequent Access, S3 One-Zone IA, S3 Intelligent Tiering, S3 Glacier and S3 Glacier Deep Archive
+- Number and size of objects: Price can be tiered (based on volume)
+- Number and type of requests
+- Data transfer OUT of the S3 region
+- S3 Transfer Acceleration
+- Lifecycle transitions
+- Similar service: EFS (pay per use, has infrequent access & lifecycle rules)
+
+## Storage Pricing - EBS
+- Volume type (based on performance) 
+- Storage volume in GB per month **provisionned**
+- IOPS: 
+- General Purpose SSD: Included 
+- Provisioned IOPS SSD: Provisionned amount in IOPS - Magnetic: Number of requests 
+- Snapshots: 
+- Added data cost per GB per month 
+- Data transfer:
+ - Outbound data transfer are tiered for volume discounts 
+ - Inbound is free
+
+## Database Pricing - RDS
+- Per hour billing
+- Database characteristics:
+  - Engine
+  - Size
+  - Memory class
+- Purchase type:
+  - On-demand
+  - Reserved instances (1 or 3 years) with required up-front
+- Backup Storage: There is no additional charge for backup storage up to 100% of your total database storage for a region. 
+
+- Additional storage (per GB per month) 
+- Number of input and output requests per month 
+- Deployment type (storage and I/O are variable): 
+  - Single AZ 
+  - Multiple AZs 
+- Data transfer: 
+  - Outbound data transfer are tiered for volume discounts 
+  - Inbound is free
+
+## Content Delivery – CloudFront
+- Pricing is different across different geographic regions 
+- Aggregated for each edge location, then applied to your bill 
+- Data Transfer Out (volume discount) 
+- Number of HTTP/HTTPS requests
+
+![CloudFront Delivery](img/cloudfron-content-delivery.png)
+
+## Networking Costs in AWS per GB - Simplified
+- Use Private IP instead of Public IP for good savings and better network performance
+- Use same AZ for maximum savings (at the cost of high availability)
+
+![Networking](img/networking.png)
+
+## Savings Plan
+- Commit a certain $ amount per hour for 1 or 3 years 
+- Easiest way to setup long-term commitments on AWS
+- **EC2 Savings Plan** 
+  - Up to 72% discount compared to On-Demand 
+  - Commit to usage of individual instance families in a region (e.g. C5 or M5) 
+  - Regardless of AZ, size (m5.xl to m5.4xl), OS (Linux/Windows) or tenancy 
+  - All upfront, partial upfront, no upfront 
+- **Compute Savings Plan** 
+  - Up to 66% discount compared to On-Demand 
+  - Regardless of Family, Region, size, OS, tenancy, compute options 
+  - Compute Options: EC2, Fargate, Lambda 
+- **Machine Learning Savings Plan**: SageMaker… 
+- Setup from the AWS Cost Explorer console 
+- Estimate pricing at https://aws.amazon.com/savingsplans/pricing/
+
+## AWS Compute Optimizer
+- **Reduce costs** and **improve performance** by recommending optimal AWS resources for your workloads
+- Helps you choose optimal configurations and right - size your workloads (over/under provisioned)
+- Uses Machine Learning to analyze your **resources’ configurations** and their **utilization CloudWatch metrics**
+- Supported resources 
+- EC2 instances 
+- EC2 Auto Scaling Groups 
+- EBS volumes 
+- Lambda functions 
+- Lower your costs by up to 25% 
+- Recommendations can be exported to S3
+
+![cloud optimizer](img/cloud-optimizer.png)
+
+## Billing and Costing Tools
+- Estimating costs in the cloud: 
+  - Pricing Calculator 
+- Tracking costs in the cloud: 
+  - Billing Dashboard 
+  - Cost Allocation Tags 
+  - Cost and Usage Reports 
+  - Cost Explorer 
+- Monitoring against costs plans: 
+  - Billing Alarms 
+  - Budgets
+
+## AWS Pricing Calculator 
+- Available at https://calculator.aws/ 
+- Estimate the cost for your solution architecture
+
+![AWS Calculator](img/aws-calculator.png)
+
+## AWS Billing Dashboard
+
+![AWS Billing Dashboard](img/aws-billing-dashboard.png)
+
+## AWS Free Tier Dashboard
+
+![free-tier dashboard](img/free-tier-dashboard.png)
+
+## Cost Allocation Tags
+-  Use **cost allocation tags** to track your AWS costs on a detailed level
+- **AWS generated tags**
+  - Automatically applied to the resource you create
+  - Starts with Prefix aws: (e.g. aws: createdBy)
+- **User-defined tags**
+  - Defined by the user
+  - Starts with Prefix **user**: 
+
+![Allocation tags](img/allocation-tags.png)
+
+## Tagging and Resource Groups
+- **Tags** are used for organizing resources:
+  - EC2: instances, images, load balancers, security groups…
+  - RDS, VPC resources, Route 53, IAM users, etc…
+  - Resources created by CloudFormation are all tagged the same way
+- Free naming, common tags are: Name, Environment, Team …
+- Tags can be used to create **Resource Groups**
+- Create, maintain, and view a collection of resources that share common tags
+- Manage these tags using the Tag Editor
+
+## Cost and Usage Reports
+- Dive deeper into your AWS costs and usage
+- The AWS Cost & Usage Report contains **the most comprehensive set of AWS cost and usage data available**, including additional metadata about AWS services, pricing, and reservations (e.g., **Amazon EC2 Reserved Instances (RIs)**).
+- The AWS Cost & Usage Report lists AWS usage for each service category used by an account and its IAM users in hourly or daily line items, as well as any tags that you have activated for cost allocation purposes.
+- Can be integrated with Athena, Redshift or QuickSight
+
+## Cost and Usage Reports
+
+![Cost and Usage Reports](img/cost%26usage%20reports.png)
+
+## Cost Explorer
+- Visualize, understand, and manage your AWS costs and usage over time
+- Create custom reports that analyze cost and usage data.
+- Analyze your data at a high level: total costs and usage across all accounts
+- Or Monthly, hourly, resource level granularity
+- Choose an optimal **Savings Plan** (to lower prices on your bill)
+- **Forecast usage up to 12 months based on previous usage**
+
+![Cost explorer](img/cost-explorer.png)
+
+## Cost Explorer– Forecast Usage
+
+![Cost Explorer - forecast usage](img/cost-explorer-forecast-usage.png)
+
+
+## Billing & Costing tools
+|Estimating cost in the cloud|Tracking costs in the cloud|
+|--------------------------|-------------------|
+|<ul><li>TCOCalculator</li><li>Simple Monthly Calculator / Pricing Calculator</li></ul>|<ul><li>Billing Dashboard</li><li>Cost allocation tags</li><li>Cost and Usage Reports</li><li>Cost Explorer</li></ul>|
+
+## Billing Alarms in CloudWatch
+- **Billing data metric is stored in CloudWatch us-east1**
+- Billing data are for overall **worldwide** AWS costs
+- It’s for actual cost, not for projected costs
+- Intended a simple alarm (not as powerful as AWS Budgets)
+
+![Bill Alarm Cloud watch](img/bill-alarm-cloud-watch.png)
+
+## AWS Budgets
+- Create budget and **send alarms when costs exceeds the budget**
+- 3 types of budgets: Usage, Cost, Reservation
+- For Reserved Instances (RI)
+- Track utilization
+- Supports EC2, ElastiCache, RDS, Redshift
+- Up to 5 SNS notifications per budget
+- Can filter by: Service, Linked Account, Tag, Purchase Option, Instance Type, Region, Availability Zone, API Operation, etc…
+- Same options as AWS Cost Explorer!
+- 2 budgets are free, then $0.02/day/budget
+
+## Trusted Advisor
+- No need to install anything– high level
+AWS account assessment
+-Analyze your AWS accounts and provides
+recommendation on 5 categories
+-**Cost optimization**
+-**Performance** 
+-**Security** 
+-**Fault tolerance** 
+-**Service limits**
+
+## Trusted Advisor – Support Plans
+
+|7 CORE CHECKS -Basic & Developer Support plan|FULL CHECKS - Business & Enterprise Support plan|
+|------|-----|
+|<ul><li>S3 Bucket Permissions</li><li>Security Groups – Specific Ports Unrestricted</li><li>• IAM Use (one IAM user minimum)</li><li>• MFA on Root Account</li><li>EBS Public Snapshots</li><li>RDS Public Snapshots</li><li> Service Limits</li></ul>| <ul><li>Full Checks available on the 5 categories</li><li>Ability to set CloudWatch alarms when reaching limits</li><li><b>Programmatic Access using AWS Support API</b></li></ul> |
+
+## AWS Support Plans Pricing
+- Basic Support: free
+
+![Support Plans](img/support-plans-pricing.png)
+
+## AWS Basic Support Plan
+- **Customer Service & Communities** - 24x7 access to customer service, documentation, whitepapers, and support forums.
+- **AWS Trusted Advisor** - Access to the 7 core Trusted Advisor checks and guidance to provision your resources following best practices to increase performance and improve security.
+- **AWS Personal Health Dashboard** - A personalized view of the health of AWS services, and alerts when your resources are impacted.
+
+## AWS Developer Support Plan
+- All Basic Support Plan + 
+- **Business hours email access** to Cloud Support Associates 
+- Unlimited cases / 1 primary contact 
+- Case severity / response times: 
+- General guidance: < 24 business hours 
+- System impaired: < 12 business hours
+
+## AWS Business Support Plan (24/7)
+- Intended to be used if you have **production workloads**
+- **Trusted Advisor** – Full set of checks + API access
+- **24x7 phone, email, and chat access** to Cloud Support Engineers
+- Unlimited cases / unlimited contacts
+- Access to Infrastructure Event Management **for additional fee**.
+- Case severity / response times:
+- General guidance: < 24 business hours
+- System impaired: < 12 business hours
+- **Production system impaired: < 4 hours**
+- **Production system down: < 1 hour**
+
+## AWS Enterprise On-Ramp Support Plan (24/7)
+- Intended to be used if you have **production or business critical workloads**
+- All of Business Support Plan +
+- Access to a pool of **Technical Account Managers (TAM)**
+- **Concierge Support Team** (for billing and account best practices)
+- **Infrastructure Event Management, Well-Architected & Operations Reviews**
+- Case severity / response times:
+- …
+- Production system impaired: < 4 hours
+- Production system down: < 1 hour
+- **Business-critical system down: < 30 minutes**
+
+
+## AWS Enterprise Support Plan (24/7)
+- Intended to be used if you have **mission critical workloads**
+- All of Business Support Plan +
+- Access to a designated **Technical Account Manager (TAM)**
+- **Concierge Support Team** (for billing and account best practices)
+- **Infrastructure Event Management, Well-Architected & Operations Reviews**
+- Case severity / response times:
+- …
+- Production system impaired: < 4 hours
+- Production system down: < 1 hour
+- **Business-critical system down**: < 15 minutes
+
+## Account Best Practices – Summary
+- Operate multiple accounts using **Organizations**
+- Use **SCP** (service control policies) to restrict account power
+- Easily setup multiple accounts with best-practices with **AWS Control Tower**
+- **Use Tags & Cost Allocation Tags** for easy management & billing
+- **IAM guidelines**: MFA, least-privilege, password policy, password rotation
+- **Config** to record all resources configurations & compliance over time
+- **CloudFormation** to deploy stacks across accounts and regions
+- **Trusted Advisor** to get insights, Support Plan adapted to your needs
+- Send Service Logs and Access Logs to **S3 or CloudWatch Logs**
+- **CloudTrail** to record API calls made within your account
+- **If your Account is compromised**: change the root password, delete and rotate all passwords / keys, contact the AWS support
+
+## Billing and Costing Tools – Summary
+- **Compute Optimizer**: recommends resources’ configurations to reduce cost
+- **Pricing Calculator**: cost of services on AWS
+- **Billing Dashboard: high level overview + free tier dashboard
+- **Cost Allocation Tags**: tag resources to create detailed reports
+- **Cost and Usage Reports**: most comprehensive billing dataset
+- **Cost Explorer**:View current usage (detailed) and forecast usage
+- **Billing Alarms**: in us-east-1 – track overall and per-service billing
+- **Budgets**: more advanced – track usage, costs, RI, and get alerts
+- **Savings Plans**: easy way to save based on long-term usage of AWS
+
