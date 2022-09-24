@@ -56,3 +56,4 @@
 - **Cognito**: create a database of users for your mobile & web applications
 - **Directory Services**: integrate Microsoft Active Directory in AWS
 - **Single Sign-On (SSO)**: one login for multiple AWS accounts & application
+
