@@ -245,3 +245,4 @@ connections between systems|
 
 
 ![AWS Pinpoint](../img/pinpoint.png)
+
